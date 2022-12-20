@@ -12,8 +12,8 @@ CREATE TABLE "users" (
 
 CREATE TABLE "tokens" (
 	"id" serial NOT NULL,
-	"token" varchar(200) NOT NULL UNIQUE,
-	"userId" integer NOT NULL UNIQUE,
+	"token" TEXT NOT NULL UNIQUE,
+	"userId" integer NOT NULL,
 	CONSTRAINT "tokens_pk" PRIMARY KEY ("id")
 ) WITH (
   OIDS=FALSE
@@ -23,9 +23,9 @@ CREATE TABLE "tokens" (
 
 CREATE TABLE "urls" (
 	"id" serial NOT NULL,
-	"url" varchar(255) NOT NULL UNIQUE,
-	"shortUrl" varchar(255) NOT NULL,
-	"userId" integer NOT NULL UNIQUE,
+	"url" TEXT NOT NULL UNIQUE,
+	"shortUrl" TEXT NOT NULL,
+	"userId" integer NOT NULL,
 	"acesses" integer NOT NULL,
 	CONSTRAINT "urls_pk" PRIMARY KEY ("id")
 ) WITH (

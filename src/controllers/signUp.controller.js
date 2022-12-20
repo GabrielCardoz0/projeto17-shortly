@@ -30,8 +30,3 @@ export default async function signUpController(req,res) {
         return res.sendStatus(500);
     };
 };
-
-// try{}catch(err){
-//     console.log(err);
-//     return res.sendStatus(500);
-// };

@@ -6,3 +6,8 @@ export const newUserSchema = Joi.object({
     password: Joi.string().required(),
     confirmPassword: Joi.string().required()
 });
+
+export const userSchema = Joi.object({
+    email:Joi.string().email({minDomainSegments:2, tlds:{allow:['com','net']}}).required(),
+    password: Joi.string().required()
+});
