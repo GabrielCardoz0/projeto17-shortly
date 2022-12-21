@@ -1,6 +1,5 @@
 import connection from "../database/db.js";
 
-
 export default async function getUrlsIdController(req,res) {
     try {
         const { id } = req.params;

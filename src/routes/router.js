@@ -1,4 +1,5 @@
 import { Router } from "express";
+import deleteUrlController from "../controllers/deleteUrl.controller.js";
 import getUrlsIdController from "../controllers/getUrlsId.controller.js";
 import openShortUrlController from "../controllers/openShortUrl.controller.js";
 import signInCcontroller from "../controllers/signIn.controller.js";
@@ -17,5 +18,7 @@ router.post("/urls/shorten", bearerAuthenticationMiddleware, urlShortenControlle
 router.get("/urls/:id", getUrlsIdController);
 
 router.get("/urls/open/:shortUrl", openShortUrlController);
+
+router.delete("/urls/:id", bearerAuthenticationMiddleware, deleteUrlController)
 
 export default router;
