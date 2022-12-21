@@ -23,7 +23,7 @@ CREATE TABLE "tokens" (
 
 CREATE TABLE "urls" (
 	"id" serial NOT NULL,
-	"url" TEXT NOT NULL UNIQUE,
+	"url" TEXT NOT NULL,
 	"shortUrl" TEXT NOT NULL,
 	"userId" integer NOT NULL,
 	"acesses" integer NOT NULL,
