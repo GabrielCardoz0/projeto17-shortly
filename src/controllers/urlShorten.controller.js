@@ -4,8 +4,6 @@ import { urlSchema } from "../models/schemas.js";
 
 export default async function urlShortenController(req,res) {
     try {
-        const { authorization } = req.headers;
-
         const { url } = req.body;
 
         const validate = urlSchema.validate(req.body, { abortEarly:false});

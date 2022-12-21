@@ -16,7 +16,6 @@ export default async function openShortUrlController(req,res) {
         await connection.query('UPDATE urls SET acesses = $1 WHERE id = $2;', [acessQuantity,urlFinded.rows[0].id]);
 
         
-    
         res.redirect(urlFinded.rows[0].url);
 
     } catch (error) {

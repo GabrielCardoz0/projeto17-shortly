@@ -12,8 +12,8 @@ export default async function bearerAuthenticationMiddleware(req,res,next) {
 
         if(tokenVerify.rows.length === 0 ) return res.sendStatus(401);
 
-        res.locals.userId = tokenVerify.rows[0].id;
-        
+        res.locals.userId = tokenVerify.rows[0].userId;
+
         next();
 
     } catch (error) {
