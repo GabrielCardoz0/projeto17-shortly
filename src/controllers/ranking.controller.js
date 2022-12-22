@@ -8,7 +8,7 @@ export default async function rankingController(req,res) {
             return b.visitCount - a.visitCount;
         });
 
-        res.send(rankingList.rows);
+        res.send(rankingList.rows.slice(0,10));
 
     } catch (error) {
         console.log(error);
