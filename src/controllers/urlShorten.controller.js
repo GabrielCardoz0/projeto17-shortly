@@ -24,5 +24,5 @@ export default async function urlShortenController(req,res) {
     } catch (error) {
         console.log(error);
         res.sendStatus(500);
-    }
+    };
 };
